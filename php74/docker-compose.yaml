@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: nginx
+    image: bencejoob/laravel-nginx:latest
+    ports:
+      - "8000:80"
+    depends_on:
+      - php
+    networks:
+      - app-network
+
+  php:
+    container_name: php
+    image: bencejoob/laravel-php74
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
