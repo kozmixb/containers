@@ -31,3 +31,8 @@ RUN docker-php-ext-install pdo pdo_mysql zip bcmath
 
 # Install PHP Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod 0755 /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
