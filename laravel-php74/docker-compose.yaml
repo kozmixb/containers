@@ -3,7 +3,7 @@ version: '3'
 services:
   nginx:
     container_name: nginx
-    image: bencejoob/laravel-nginx:latest
+    image: bencejob/laravel-nginx:latest
     ports:
       - "8000:80"
     depends_on:
@@ -13,7 +13,7 @@ services:
 
   php:
     container_name: php
-    image: bencejoob/laravel-php74
+    image: bencejob/laravel-php74
     build:
       context: .
       dockerfile: Dockerfile
