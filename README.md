@@ -13,7 +13,7 @@ $ docker pull bencejoob/APP
 To use a specific version, you can pull a versioned tag.
 
 ```console
-$ docker pull bitnami/APP:[TAG]
+$ docker pull bencejoob/APP:[TAG]
 ```
 
 If you wish, you can also build the image yourself by cloning the repository, changing to the directory containing the Dockerfile and executing the `docker build` command.
