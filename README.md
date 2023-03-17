@@ -25,3 +25,10 @@ $ docker build -t bencejob/APP .
 ```
 
 > Remember to replace the `APP` placeholders in the example command above with the correct values.
+
+## Build images for multi platform environments
+
+```
+docker buildx create --use
+docker buildx build -t bencejob/*** --platform linux/x86_64,linux/arm64 --push ./***
+```
