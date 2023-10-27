@@ -40,6 +40,12 @@ get_nfs_args() {
 # We expect this at times and don't want the script to be terminated when it occurs
 set -uo pipefail
 
+if [ ! -d $SHARED_DIRECTORY ]; then
+  mkdir -p $SHARED_DIRECTORY
+  echo "Shared folder is created"
+  ls -al /
+fi
+
 # This loop runs till until we've started up successfully
 while true; do
 
